@@ -3,73 +3,65 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Executive Cybersecurity Speaker</title>
+<title>Cybersecurity Executive Speaker</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 :root{
-  --champagne:#C8B08A;
-  --ink:#1B1F24;
-  --muted:#6B7280;
-  --bg:#F6F3EE;
+  --bg:#F3F4F6;
   --card:#FFFFFF;
-  --border:#E7E1D8;
+  --text:#1F2937;
+  --muted:#6B7280;
+  --border:#E5E7EB;
+  --gold:#C8A77A;
 }
 
 body{
   margin:0;
   font-family:'Inter',sans-serif;
   background:var(--bg);
-  color:var(--ink);
-}
-
-/* subtle editorial texture */
-body:before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:
-    radial-gradient(circle at 15% 10%, rgba(0,0,0,0.03), transparent 40%),
-    radial-gradient(circle at 85% 90%, rgba(0,0,0,0.02), transparent 45%);
-  pointer-events:none;
+  color:var(--text);
 }
 
 /* HEADER */
 .header{
   text-align:center;
-  padding:100px 20px 30px;
+  padding:110px 20px 50px;
 }
 
 .header h1{
   font-size:60px;
-  font-weight:500;
-  letter-spacing:-1px;
+  font-weight:600;
   margin:0;
+  letter-spacing:-1px;
+
+  /* subtle champagne gold */
+  color:var(--gold);
 }
 
 .header p{
   margin-top:10px;
+  font-size:15px;
   color:var(--muted);
-  font-size:16px;
 }
 
 /* PROFILE */
 .profile{
-  max-width:1100px;
-  margin:40px auto;
+  max-width:1000px;
+  margin:0 auto;
+  padding:0 20px 60px;
   display:grid;
   grid-template-columns:1fr 1.5fr;
-  gap:50px;
-  padding:0 20px;
+  gap:40px;
   align-items:center;
 }
 
 .photo{
-  height:380px;
-  border-radius:14px;
+  height:360px;
+  border-radius:12px;
   overflow:hidden;
-  background:#eee7dd;
+  background:#e5e7eb;
   border:1px solid var(--border);
 }
 
@@ -79,67 +71,46 @@ body:before{
   object-fit:cover;
 }
 
+/* QUOTE */
 .quote{
-  font-size:24px;
+  font-size:20px;
   line-height:1.6;
-  border-left:3px solid var(--champagne);
   padding-left:18px;
-  color:#2b2f36;
+  border-left:3px solid var(--gold);
 }
 
 /* SECTION TITLE */
 .section-title{
-  max-width:1100px;
-  margin:70px auto 20px;
+  max-width:1000px;
+  margin:60px auto 15px;
   padding:0 20px;
   font-size:12px;
-  letter-spacing:3px;
+  letter-spacing:2px;
   text-transform:uppercase;
-  color:var(--champagne);
+  color:var(--muted);
 }
 
-/* FEATURED */
-.featured{
-  max-width:1100px;
-  margin:0 auto 20px;
-  display:grid;
-  grid-template-columns:180px 1fr 120px;
-  gap:20px;
+/* CARD */
+.card{
+  max-width:1000px;
+  margin:10px auto;
   background:var(--card);
   border:1px solid var(--border);
-  border-radius:14px;
-  padding:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.04);
-}
-
-/* TALKS */
-.talk{
-  max-width:1100px;
-  margin:14px auto;
-  display:grid;
-  grid-template-columns:140px 1fr 120px;
-  gap:20px;
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:16px;
-  box-shadow:0 8px 25px rgba(0,0,0,0.03);
-
-  opacity:0;
-  transform:translateY(16px);
-  transition:all .6s ease;
-}
-
-.talk.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-.thumb{
-  height:90px;
   border-radius:10px;
+  padding:16px;
+
+  display:grid;
+  grid-template-columns:140px 1fr 100px;
+  gap:16px;
+  align-items:center;
+}
+
+/* IMAGE */
+.thumb{
+  height:80px;
+  border-radius:8px;
   overflow:hidden;
-  background:#f0e9df;
+  background:#f1f5f9;
 }
 
 .thumb img{
@@ -148,39 +119,43 @@ body:before{
   object-fit:cover;
 }
 
+/* TEXT */
 .title{
   font-weight:600;
-  margin-bottom:6px;
-  color:var(--ink);
+  margin-bottom:4px;
 }
 
 .desc{
-  font-size:14px;
+  font-size:13px;
   color:var(--muted);
 }
 
-/* badge */
+/* BADGE */
 .badge{
   font-size:11px;
-  padding:5px 10px;
+  padding:4px 8px;
   border-radius:999px;
-  border:1px solid rgba(200,176,138,0.5);
-  color:var(--champagne);
-  height:fit-content;
+  border:1px solid var(--border);
+  text-align:center;
+  color:var(--muted);
 }
 
 /* FOOTER */
 footer{
   text-align:center;
-  padding:70px 20px;
+  padding:60px 20px;
   font-size:12px;
-  color:#9ca3af;
+  color:var(--muted);
 }
 
 /* MOBILE */
-@media(max-width:900px){
-  .profile,.featured,.talk{
+@media(max-width:800px){
+  .profile,.card{
     grid-template-columns:1fr;
+  }
+
+  .header h1{
+    font-size:40px;
   }
 }
 </style>
@@ -198,11 +173,11 @@ footer{
 <div class="profile">
 
   <div class="photo">
-    <img src="images/profile.jpg">
+    <img src="images/profile.jpg" alt="Speaker">
   </div>
 
   <div class="quote">
-    “Cybersecurity leadership is an executive discipline—where trust, risk, and strategy define enterprise value.”
+    “Cybersecurity leadership is the ability to translate risk into strategic decisions that drive resilience, trust, and business value.”
   </div>
 
 </div>
@@ -210,39 +185,37 @@ footer{
 <!-- FEATURED -->
 <div class="section-title">Featured Keynote</div>
 
-<div class="featured">
+<div class="card">
   <div class="thumb"><img src="images/featured.jpg"></div>
-
   <div>
     <div class="title">SecureWorld Detroit — Global AI Dilemma</div>
-    <div class="desc">Executive keynote on AI governance, cyber risk, and enterprise strategy.</div>
+    <div class="desc">Executive keynote on AI governance and enterprise cyber risk strategy.</div>
   </div>
-
-  <div class="badge">Featured</div>
+  <div class="badge">Keynote</div>
 </div>
 
 <!-- TALKS -->
 <div class="section-title">Selected Engagements</div>
 
-<div class="talk">
+<div class="card">
   <div class="thumb"><img src="images/issa.jpg"></div>
   <div>
     <div class="title">ISSA Motor City Chapter</div>
-    <div class="desc">From Risk to ROI: Zero Trust as business transformation.</div>
+    <div class="desc">From Risk to ROI: The strategic value of Zero Trust.</div>
   </div>
-  <div class="badge">Keynote</div>
+  <div class="badge">Talk</div>
 </div>
 
-<div class="talk">
+<div class="card">
   <div class="thumb"><img src="images/cyberrisk.jpg"></div>
   <div>
     <div class="title">CyberRisk Alliance</div>
-    <div class="desc">CISO fireside chat and executive roundtable leadership.</div>
+    <div class="desc">CISO fireside chat on leadership and workforce development.</div>
   </div>
   <div class="badge">Panel</div>
 </div>
 
-<div class="talk">
+<div class="card">
   <div class="thumb"><img src="images/airforce.jpg"></div>
   <div>
     <div class="title">U.S. Air Force (Invitation Only)</div>
@@ -251,32 +224,18 @@ footer{
   <div class="badge">Briefing</div>
 </div>
 
-<div class="talk">
+<div class="card">
   <div class="thumb"><img src="images/isaca.jpg"></div>
   <div>
     <div class="title">ISACA / HTCIA / CXO Xchange</div>
-    <div class="desc">Leadership in cybersecurity transformation and AI governance.</div>
+    <div class="desc">Leadership, AI governance, and cybersecurity transformation.</div>
   </div>
   <div class="badge">Leadership</div>
 </div>
 
 <footer>
-© Executive Cybersecurity Speaker Portfolio • Leadership • Strategy • Advisory
+© Cybersecurity Executive Speaker • Leadership • Strategy • Advisory
 </footer>
-
-<script>
-const items = document.querySelectorAll('.talk');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-},{ threshold:0.15 });
-
-items.forEach(i => observer.observe(i));
-</script>
 
 </body>
 </html>
