@@ -8,32 +8,41 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
+:root{
+  --champagne:#C8B08A;
+  --ink:#1B1F24;
+  --muted:#6B7280;
+  --bg:#F6F3EE;
+  --card:#FFFFFF;
+  --border:#E7E1D8;
+}
+
 body{
   margin:0;
   font-family:'Inter',sans-serif;
-  background:#f5f3f0;
-  color:#1f2937;
+  background:var(--bg);
+  color:var(--ink);
 }
 
-/* soft cinematic background texture */
+/* subtle editorial texture */
 body:before{
   content:"";
   position:fixed;
   inset:0;
   background:
-    radial-gradient(circle at 20% 10%, rgba(184,160,110,0.10), transparent 40%),
-    radial-gradient(circle at 80% 90%, rgba(120,110,95,0.08), transparent 45%);
+    radial-gradient(circle at 15% 10%, rgba(0,0,0,0.03), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(0,0,0,0.02), transparent 45%);
   pointer-events:none;
 }
 
-/* TOP NAME */
+/* HEADER */
 .header{
   text-align:center;
-  padding:80px 20px 30px;
+  padding:100px 20px 30px;
 }
 
 .header h1{
-  font-size:56px;
+  font-size:60px;
   font-weight:500;
   letter-spacing:-1px;
   margin:0;
@@ -41,130 +50,138 @@ body:before{
 
 .header p{
   margin-top:10px;
-  color:#6b7280;
+  color:var(--muted);
   font-size:16px;
 }
 
-/* PROFILE SECTION */
+/* PROFILE */
 .profile{
   max-width:1100px;
   margin:40px auto;
   display:grid;
-  grid-template-columns:1fr 1.6fr;
-  gap:40px;
+  grid-template-columns:1fr 1.5fr;
+  gap:50px;
   padding:0 20px;
   align-items:center;
 }
 
 .photo{
-  height:360px;
-  border-radius:18px;
-  background:linear-gradient(135deg,#e8e4dd,#dcd6cd);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#8c7a5a;
-  font-size:14px;
-  box-shadow:0 30px 60px rgba(0,0,0,0.08);
+  height:380px;
+  border-radius:14px;
+  overflow:hidden;
+  background:#eee7dd;
+  border:1px solid var(--border);
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
 .quote{
-  font-size:22px;
+  font-size:24px;
   line-height:1.6;
-  color:#374151;
-  border-left:3px solid #b89f6e;
-  padding-left:20px;
+  border-left:3px solid var(--champagne);
+  padding-left:18px;
+  color:#2b2f36;
 }
 
 /* SECTION TITLE */
 .section-title{
   max-width:1100px;
-  margin:60px auto 20px;
+  margin:70px auto 20px;
   padding:0 20px;
-  font-size:13px;
-  letter-spacing:2px;
-  color:#8c7a5a;
+  font-size:12px;
+  letter-spacing:3px;
   text-transform:uppercase;
+  color:var(--champagne);
 }
 
-/* FEATURED TALK */
+/* FEATURED */
 .featured{
   max-width:1100px;
   margin:0 auto 20px;
   display:grid;
-  grid-template-columns:180px 1fr 220px;
+  grid-template-columns:180px 1fr 120px;
   gap:20px;
-  background:#ffffff;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
   padding:18px;
-  border-radius:16px;
-  border:1px solid #eee;
-  box-shadow:0 25px 60px rgba(0,0,0,0.05);
-  transform:scale(1.01);
+  box-shadow:0 10px 30px rgba(0,0,0,0.04);
 }
 
-.thumb{
-  height:110px;
-  border-radius:12px;
-  background:linear-gradient(135deg,#e7e2d8,#f2eee8);
-}
-
-/* STANDARD TALKS */
+/* TALKS */
 .talk{
   max-width:1100px;
   margin:14px auto;
   display:grid;
-  grid-template-columns:140px 1fr 200px;
+  grid-template-columns:140px 1fr 120px;
   gap:20px;
-  background:#fff;
-  padding:16px;
+  background:var(--card);
+  border:1px solid var(--border);
   border-radius:14px;
-  border:1px solid #eee;
-  box-shadow:0 15px 40px rgba(0,0,0,0.04);
-  transition:transform .25s ease, box-shadow .25s ease;
+  padding:16px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.03);
+
+  opacity:0;
+  transform:translateY(16px);
+  transition:all .6s ease;
 }
 
-.talk:hover{
-  transform:translateY(-4px);
-  box-shadow:0 25px 60px rgba(0,0,0,0.08);
+.talk.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
-.small-thumb{
+.thumb{
   height:90px;
   border-radius:10px;
-  background:#eee6da;
+  overflow:hidden;
+  background:#f0e9df;
+}
+
+.thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
 .title{
   font-weight:600;
   margin-bottom:6px;
+  color:var(--ink);
 }
 
 .desc{
   font-size:14px;
-  color:#6b7280;
+  color:var(--muted);
 }
 
+/* badge */
 .badge{
-  display:inline-block;
-  padding:5px 10px;
   font-size:11px;
+  padding:5px 10px;
   border-radius:999px;
-  background:rgba(184,160,110,0.12);
-  border:1px solid rgba(184,160,110,0.3);
-  color:#8c7a5a;
+  border:1px solid rgba(200,176,138,0.5);
+  color:var(--champagne);
+  height:fit-content;
 }
 
 /* FOOTER */
 footer{
   text-align:center;
-  padding:60px 20px;
+  padding:70px 20px;
   font-size:12px;
   color:#9ca3af;
 }
 
+/* MOBILE */
 @media(max-width:900px){
-  .profile{grid-template-columns:1fr;}
-  .featured,.talk{grid-template-columns:1fr;}
+  .profile,.featured,.talk{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 </head>
@@ -174,30 +191,33 @@ footer{
 <!-- HEADER -->
 <div class="header">
   <h1>NAME</h1>
-  <p>Cybersecurity Speaker • Executive Advisor • Strategic Leader</p>
+  <p>Cybersecurity Speaker • Executive Leader • Strategic Advisor</p>
 </div>
 
 <!-- PROFILE -->
 <div class="profile">
-  <div class="photo">Executive Portrait</div>
+
+  <div class="photo">
+    <img src="images/profile.jpg">
+  </div>
 
   <div class="quote">
-    “Cybersecurity leadership is no longer technical—it is strategic, executive-level decision making
-    that defines enterprise resilience, trust, and competitive advantage.”
+    “Cybersecurity leadership is an executive discipline—where trust, risk, and strategy define enterprise value.”
   </div>
+
 </div>
 
 <!-- FEATURED -->
 <div class="section-title">Featured Keynote</div>
 
 <div class="featured">
-  <div class="thumb"></div>
+  <div class="thumb"><img src="images/featured.jpg"></div>
+
   <div>
     <div class="title">SecureWorld Detroit — Global AI Dilemma</div>
-    <div class="desc">
-      Executive keynote on balancing AI innovation with regulatory frameworks and enterprise risk strategy.
-    </div>
+    <div class="desc">Executive keynote on AI governance, cyber risk, and enterprise strategy.</div>
   </div>
+
   <div class="badge">Featured</div>
 </div>
 
@@ -205,37 +225,37 @@ footer{
 <div class="section-title">Selected Engagements</div>
 
 <div class="talk">
-  <div class="small-thumb"></div>
+  <div class="thumb"><img src="images/issa.jpg"></div>
   <div>
     <div class="title">ISSA Motor City Chapter</div>
-    <div class="desc">From Risk to ROI: Translating Zero Trust into measurable business value.</div>
+    <div class="desc">From Risk to ROI: Zero Trust as business transformation.</div>
   </div>
   <div class="badge">Keynote</div>
 </div>
 
 <div class="talk">
-  <div class="small-thumb"></div>
+  <div class="thumb"><img src="images/cyberrisk.jpg"></div>
   <div>
     <div class="title">CyberRisk Alliance</div>
-    <div class="desc">Executive fireside chat with CISO leadership roundtable discussion.</div>
+    <div class="desc">CISO fireside chat and executive roundtable leadership.</div>
   </div>
   <div class="badge">Panel</div>
 </div>
 
 <div class="talk">
-  <div class="small-thumb"></div>
+  <div class="thumb"><img src="images/airforce.jpg"></div>
   <div>
     <div class="title">U.S. Air Force (Invitation Only)</div>
-    <div class="desc">Confidential executive cybersecurity briefing for defense leadership.</div>
+    <div class="desc">Confidential executive cybersecurity briefing.</div>
   </div>
   <div class="badge">Briefing</div>
 </div>
 
 <div class="talk">
-  <div class="small-thumb"></div>
+  <div class="thumb"><img src="images/isaca.jpg"></div>
   <div>
     <div class="title">ISACA / HTCIA / CXO Xchange</div>
-    <div class="desc">Leadership in cybersecurity transformation, AI governance, and strategy.</div>
+    <div class="desc">Leadership in cybersecurity transformation and AI governance.</div>
   </div>
   <div class="badge">Leadership</div>
 </div>
@@ -243,6 +263,20 @@ footer{
 <footer>
 © Executive Cybersecurity Speaker Portfolio • Leadership • Strategy • Advisory
 </footer>
+
+<script>
+const items = document.querySelectorAll('.talk');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{ threshold:0.15 });
+
+items.forEach(i => observer.observe(i));
+</script>
 
 </body>
 </html>
