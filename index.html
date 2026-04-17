@@ -1,182 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cybersecurity Speaker & Strategic Leader</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0f14; /* deep graphite black */
+    color: #e5e7eb;
+    line-height: 1.6;
+  }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #0a0f1c;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
+  /* HERO */
+  .hero {
+    padding: 110px 20px;
+    text-align: center;
+    background: radial-gradient(circle at top, #1a1f2a, #0b0f14);
+    border-bottom: 1px solid #1f2937;
+  }
 
-    /* HERO */
-    .hero {
-      padding: 100px 20px;
-      text-align: center;
-      background: radial-gradient(circle at top, #1e293b, #0a0f1c);
-    }
+  .hero h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+    letter-spacing: 1px;
+  }
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+  .hero p {
+    font-size: 18px;
+    color: #c0c0c0;
+    max-width: 850px;
+    margin: auto;
+  }
 
-    .hero p {
-      font-size: 18px;
-      color: #93c5fd;
-      max-width: 800px;
-      margin: auto;
-    }
+  .btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, #d4af37, #b08d2f);
+    color: #0b0f14;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(212,175,55,0.25);
+    transition: 0.3s;
+  }
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(212,175,55,0.4);
+  }
 
-    /* SECTIONS */
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+  /* SECTIONS */
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+  }
 
-    h2 {
-      color: #60a5fa;
-      margin-bottom: 20px;
-    }
+  h2 {
+    color: #d4af37; /* gold headings */
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+  }
 
-    .card {
-      background: #111827;
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      border: 1px solid #1f2937;
-    }
+  .card {
+    background: linear-gradient(145deg, #141a23, #0e131a);
+    padding: 22px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #1f2937;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
 
-    .tag {
-      display: inline-block;
-      background: #1e3a8a;
-      color: #93c5fd;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 12px;
-      margin: 5px 5px 0 0;
-    }
+  .tag {
+    display: inline-block;
+    background: rgba(212,175,55,0.1);
+    color: #d4af37;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 5px 5px 0 0;
+    border: 1px solid rgba(212,175,55,0.3);
+  }
 
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
 
-    footer {
-      text-align: center;
-      padding: 40px;
-      font-size: 14px;
-      color: #6b7280;
-    }
-  </style>
-</head>
-
-<body>
-
-<!-- HERO -->
-<div class="hero">
-  <h1>Cybersecurity Speaker & Strategic Leader</h1>
-  <p>
-    Delivering executive insights on cyber risk, AI governance, Zero Trust architecture,
-    and modern security leadership across military, corporate, nonprofit, and government sectors.
-  </p>
-
-  <a class="btn" href="#contact">Book a Speaking Engagement</a>
-</div>
-
-<!-- ABOUT -->
-<div class="container">
-  <h2>About</h2>
-  <div class="card">
-    Cybersecurity speaker and strategic leader specializing in translating complex
-    security challenges into actionable executive strategy. Experienced across
-    high-trust environments including military briefings, corporate leadership forums,
-    and cybersecurity conferences.
-  </div>
-
-  <!-- TOPICS -->
-  <h2>Core Speaking Topics</h2>
-  <div class="card">
-    <span class="tag">Cyber Risk Strategy</span>
-    <span class="tag">Zero Trust Architecture</span>
-    <span class="tag">AI Governance</span>
-    <span class="tag">Security Leadership</span>
-    <span class="tag">Executive Decision Making</span>
-    <span class="tag">Global Cyber Policy</span>
-  </div>
-
-  <!-- EXPERIENCE -->
-  <h2>Selected Engagements</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <b>SecureWorld Detroit</b><br>
-      Global AI Dilemma: Innovation vs Regulation
-    </div>
-
-    <div class="card">
-      <b>ISSA Motor City Chapter</b><br>
-      From Risk to ROI: Zero Trust Strategy
-    </div>
-
-    <div class="card">
-      <b>CyberRisk Alliance</b><br>
-      CISO Fireside Chat & Executive Roundtable
-    </div>
-
-    <div class="card">
-      <b>U.S. Air Force (Invitation Only)</b><br>
-      Confidential Executive Cybersecurity Briefing
-    </div>
-
-    <div class="card">
-      <b>ISACA / HTCIA / CXO Xchange</b><br>
-      Leadership, AI, and Security Transformation
-    </div>
-
-  </div>
-
-  <!-- MEDIA -->
-  <h2>Media</h2>
-  <div class="card">
-    Add speaking photos here for credibility and visual impact.
-    <br><br>
-    (Upload images to your repo → /images folder → embed using img tags)
-  </div>
-
-  <!-- CONTACT -->
-  <h2 id="contact">Contact</h2>
-  <div class="card">
-    <b>For speaking engagements, panels, and executive briefings:</b>
-    <br><br>
-    Add your email or LinkedIn here.
-  </div>
-
-</div>
-
-<footer>
-  © Cybersecurity Speaker Portfolio | Executive Briefings • Keynotes • Leadership
-</footer>
-
-</body>
-</html>
+  footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 13px;
+    color: #6b7280;
+    border-top: 1px solid #1f2937;
+  }
+</style>
