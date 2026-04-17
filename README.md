@@ -1,43 +1,61 @@
 <!DOCTYPE html>
+<html>
 <html lang="en">
 <head>
+  <title>Cybersecurity Speaker</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cybersecurity Speaker | Leadership & Strategy</title>
+  <title>Cybersecurity Speaker & Strategic Leader</title>
 
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #0b1220;
-      color: #e6e6e6;
+      font-family: 'Arial', sans-serif;
+      background: #0a0f1c;
+      color: #e5e7eb;
       line-height: 1.6;
     }
 
-    header {
-      padding: 80px 20px;
+    /* HERO */
+    .hero {
+      padding: 100px 20px;
       text-align: center;
-      background: linear-gradient(135deg, #0f172a, #111827);
+      background: radial-gradient(circle at top, #1e293b, #0a0f1c);
     }
 
-    h1 {
-      font-size: 42px;
+    .hero h1 {
+      font-size: 48px;
       margin-bottom: 10px;
     }
 
-    h2 {
-      color: #7dd3fc;
-      font-weight: normal;
+    .hero p {
+      font-size: 18px;
+      color: #93c5fd;
+      max-width: 800px;
+      margin: auto;
     }
 
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    /* SECTIONS */
     .container {
       max-width: 1000px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
 
-    .section {
-      margin-bottom: 60px;
+    h2 {
+      color: #60a5fa;
+      margin-bottom: 20px;
     }
 
     .card {
@@ -55,108 +73,123 @@
       padding: 5px 10px;
       border-radius: 20px;
       font-size: 12px;
-      margin-right: 5px;
-      margin-top: 5px;
+      margin: 5px 5px 0 0;
     }
 
-    img {
-      width: 100%;
-      max-width: 700px;
-      border-radius: 12px;
-      margin-top: 15px;
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
 
     footer {
       text-align: center;
       padding: 40px;
       font-size: 14px;
-      color: #9ca3af;
+      color: #6b7280;
     }
   </style>
 </head>
 
 <body>
+  <h1>Your Name</h1>
+  <h2>Cybersecurity Speaker & Leader</h2>
 
-<header>
+<!-- HERO -->
+<div class="hero">
   <h1>Cybersecurity Speaker & Strategic Leader</h1>
-  <h2>Keynotes • Executive Briefings • Panels • Fireside Chats</h2>
-  <p>Military | Corporate | Nonprofit | Executive Audiences</p>
-</header>
+<p>
+    Cybersecurity speaker and leader delivering keynotes, panels, fireside chats,
+    and executive briefings across military, corporate, nonprofit, and executive audiences
+    on cyber risk, AI governance, and security leadership.
+    Delivering executive insights on cyber risk, AI governance, Zero Trust architecture,
+    and modern security leadership across military, corporate, nonprofit, and government sectors.
+</p>
 
+  <h3>Speaking Engagements</h3>
+  <ul>
+    <li>SecureWorld Detroit – Global AI Dilemma</li>
+    <li>ISSA Motor City Chapter – Zero Trust Keynote</li>
+    <li>U.S. Air Force Executive Keynote (Confidential)</li>
+    <li>CyberRisk Alliance – Fireside Chat</li>
+  </ul>
+  <a class="btn" href="#contact">Book a Speaking Engagement</a>
+</div>
+
+<!-- ABOUT -->
 <div class="container">
-
-  <!-- ABOUT -->
-  <div class="section">
-    <h2>About</h2>
-    <div class="card">
-      Cybersecurity speaker and strategic leader delivering insights on cyber risk,
-      AI governance, Zero Trust architecture, and modern security leadership.
-
-      <br><br>
-      Engaging executive audiences across military, corporate, nonprofit, and government sectors
-      in high-trust, invitation-only and conference environments.
-    </div>
+  <h2>About</h2>
+  <div class="card">
+    Cybersecurity speaker and strategic leader specializing in translating complex
+    security challenges into actionable executive strategy. Experienced across
+    high-trust environments including military briefings, corporate leadership forums,
+    and cybersecurity conferences.
   </div>
 
   <!-- TOPICS -->
-  <div class="section">
-    <h2>Speaking Topics</h2>
-
-    <div class="card">
-      <span class="tag">Cyber Risk Strategy</span>
-      <span class="tag">Zero Trust</span>
-      <span class="tag">AI Governance</span>
-      <span class="tag">Security Leadership</span>
-      <span class="tag">Executive Decision Making</span>
-      <span class="tag">Global Policy & Regulation</span>
-    </div>
+  <h2>Core Speaking Topics</h2>
+  <div class="card">
+    <span class="tag">Cyber Risk Strategy</span>
+    <span class="tag">Zero Trust Architecture</span>
+    <span class="tag">AI Governance</span>
+    <span class="tag">Security Leadership</span>
+    <span class="tag">Executive Decision Making</span>
+    <span class="tag">Global Cyber Policy</span>
   </div>
 
   <!-- EXPERIENCE -->
-  <div class="section">
-    <h2>Selected Speaking Engagements</h2>
+  <h2>Selected Engagements</h2>
+
+  <div class="grid">
 
     <div class="card">
-      <b>SecureWorld Detroit Conference</b><br>
-      Global AI Dilemma: Balancing Innovation & Regulation<br>
+      <b>SecureWorld Detroit</b><br>
+      Global AI Dilemma: Innovation vs Regulation
     </div>
 
     <div class="card">
       <b>ISSA Motor City Chapter</b><br>
-      From Risk to ROI: The Strategic Value of Zero Trust<br>
+      From Risk to ROI: Zero Trust Strategy
     </div>
 
     <div class="card">
-      <b>CyberRisk Alliance – Detroit</b><br>
-      CISO Fireside Chat & Executive Roundtable Leadership<br>
+      <b>CyberRisk Alliance</b><br>
+      CISO Fireside Chat & Executive Roundtable
     </div>
 
     <div class="card">
       <b>U.S. Air Force (Invitation Only)</b><br>
-      Executive keynote briefing (classified topic – confidential setting)<br>
+      Confidential Executive Cybersecurity Briefing
     </div>
 
     <div class="card">
       <b>ISACA / HTCIA / CXO Xchange</b><br>
-      Leadership, AI, and the Future of Cybersecurity Strategy<br>
+      Leadership, AI, and Security Transformation
     </div>
+
   </div>
 
-  <!-- OPTIONAL IMAGES -->
-  <div class="section">
-    <h2>Media</h2>
-    <div class="card">
-      Add your speaking photos here:
+  <!-- MEDIA -->
+  <h2>Media</h2>
+  <div class="card">
+    Add speaking photos here for credibility and visual impact.
+    <br><br>
+    (Upload images to your repo → /images folder → embed using img tags)
+  </div>
 
-      <!-- Example -->
-      <!-- <img src="images/talk1.jpg"> -->
-    </div>
+  <!-- CONTACT -->
+  <h2 id="contact">Contact</h2>
+  <div class="card">
+    <b>For speaking engagements, panels, and executive briefings:</b>
+    <br><br>
+    Add your email or LinkedIn here.
   </div>
 
 </div>
 
 <footer>
-  © Cybersecurity Speaker Portfolio — Built for executive and professional engagements
+  © Cybersecurity Speaker Portfolio | Executive Briefings • Keynotes • Leadership
 </footer>
 
 </body>
