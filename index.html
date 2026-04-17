@@ -3,97 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cybersecurity Speaker & Strategic Leader</title>
+  <title>Cybersecurity Speaker & Executive Leader</title>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0c0f14; /* business charcoal */
-      color: #d6d6d6;
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      background: #f6f3ee; /* soft ivory luxury background */
+      color: #1f2937;
+    }
+
+    /* subtle animated background glow */
+    .bg-glow {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(212,175,55,0.15), transparent 60%);
+      top: -200px;
+      right: -200px;
+      filter: blur(40px);
+      animation: float 8s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(30px); }
     }
 
     /* HERO */
     .hero {
-      padding: 120px 20px;
+      position: relative;
       text-align: center;
-      background: radial-gradient(circle at top, #1a1f26, #0c0f14);
-      border-bottom: 1px solid #2a2f3a;
+      padding: 140px 20px 90px;
+      z-index: 2;
     }
 
     .hero h1 {
-      font-size: 54px;
+      font-size: 56px;
+      font-weight: 700;
       margin-bottom: 10px;
-      color: #f5f1e6;
-      letter-spacing: 1px;
+      letter-spacing: -1px;
     }
 
     .hero p {
       font-size: 18px;
-      color: #b8b8b8;
       max-width: 850px;
       margin: auto;
+      color: #4b5563;
+      line-height: 1.7;
     }
 
-    /* CONTAINER */
+    .gold-line {
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #c9a24e, #e6c76a);
+      margin: 25px auto;
+      border-radius: 2px;
+    }
+
+    /* SECTIONS */
     .container {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 40px 20px 80px;
+      position: relative;
+      z-index: 2;
     }
 
     h2 {
-      color: #d4af37; /* gold headings */
-      margin-bottom: 15px;
-      letter-spacing: 0.5px;
+      font-size: 22px;
+      letter-spacing: 1px;
+      color: #b08d2f; /* refined gold */
+      margin-bottom: 20px;
+      text-transform: uppercase;
     }
 
     .card {
-      background: linear-gradient(145deg, #161b22, #0f131a);
-      padding: 22px;
-      border-radius: 14px;
-      margin-bottom: 20px;
-      border: 1px solid #2a2f3a;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 26px;
+      margin-bottom: 22px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      border: 1px solid #eee;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.08);
     }
 
     .tag {
       display: inline-block;
-      background: rgba(212,175,55,0.08);
-      color: #d4af37;
       padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 12px;
       margin: 5px 5px 0 0;
-      border: 1px solid rgba(212,175,55,0.25);
+      font-size: 12px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #f5e6c8, #fff);
+      border: 1px solid #e6c76a;
+      color: #8a6d1f;
     }
 
+    /* GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
 
+    /* HERO ACCENT */
+    .accent {
+      color: #b08d2f;
+      font-weight: 600;
+    }
+
     footer {
       text-align: center;
-      padding: 40px;
+      padding: 50px;
       font-size: 13px;
-      color: #8a8a8a;
-      border-top: 1px solid #2a2f3a;
+      color: #6b7280;
     }
   </style>
 </head>
 
 <body>
 
+<div class="bg-glow"></div>
+
 <!-- HERO -->
 <div class="hero">
-  <h1>Cybersecurity Speaker & Strategic Leader</h1>
+  <h1>Cybersecurity Speaker & Executive Leader</h1>
+  <div class="gold-line"></div>
 
   <p>
-    Delivering executive insights on cyber risk, AI governance, Zero Trust architecture,
-    and modern security leadership across military, corporate, nonprofit, and government sectors.
+    Delivering <span class="accent">executive cybersecurity insight</span> across military,
+    corporate, nonprofit, and global leadership environments.
+    Specializing in cyber risk, AI governance, Zero Trust, and security transformation.
   </p>
 </div>
 
@@ -102,12 +150,12 @@
 
   <h2>About</h2>
   <div class="card">
-    Cybersecurity speaker and strategic leader translating complex security challenges
-    into executive-level strategy across high-trust environments including military briefings,
-    corporate leadership forums, nonprofit organizations, and global cybersecurity conferences.
+    Cybersecurity speaker and strategic leader delivering high-impact executive briefings,
+    keynote presentations, panel discussions, and fireside conversations across enterprise
+    and defense environments.
   </div>
 
-  <h2>Core Speaking Topics</h2>
+  <h2>Core Topics</h2>
   <div class="card">
     <span class="tag">Cyber Risk Strategy</span>
     <span class="tag">Zero Trust Architecture</span>
@@ -122,27 +170,27 @@
   <div class="grid">
 
     <div class="card">
-      <b>SecureWorld Detroit</b><br>
+      <b>SecureWorld Detroit</b><br/>
       Global AI Dilemma: Innovation vs Regulation
     </div>
 
     <div class="card">
-      <b>ISSA Motor City Chapter</b><br>
+      <b>ISSA Motor City Chapter</b><br/>
       From Risk to ROI: Zero Trust Strategy
     </div>
 
     <div class="card">
-      <b>CyberRisk Alliance</b><br>
-      CISO Fireside Chat & Executive Roundtable
+      <b>CyberRisk Alliance</b><br/>
+      Executive Fireside Chat & CISO Roundtable
     </div>
 
     <div class="card">
-      <b>U.S. Air Force (Invitation Only)</b><br>
+      <b>U.S. Air Force (Invitation Only)</b><br/>
       Confidential Executive Cybersecurity Briefing
     </div>
 
     <div class="card">
-      <b>ISACA / HTCIA / CXO Xchange</b><br>
+      <b>ISACA / HTCIA / CXO Xchange</b><br/>
       Leadership, AI, and Security Transformation
     </div>
 
@@ -150,13 +198,13 @@
 
   <h2>Contact</h2>
   <div class="card">
-    Add your email or LinkedIn for speaking inquiries.
+    Add your professional email or LinkedIn for speaking inquiries.
   </div>
 
 </div>
 
 <footer>
-  © Cybersecurity Speaker Portfolio • Executive Briefings • Leadership • Strategy
+  © Cybersecurity Speaker Portfolio • Executive Leadership • Strategy • Keynotes
 </footer>
 
 </body>
