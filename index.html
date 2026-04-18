@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Cybersecurity Executive Speaker</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Executive Cybersecurity Speaker</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
 :root{
-  --bg:#F3F4F6;
+  --bg:#EEF1F4;
   --card:#FFFFFF;
   --text:#1F2937;
   --muted:#6B7280;
-  --border:#E5E7EB;
+  --border:#D1D5DB;
   --gold:#C8A77A;
 }
 
@@ -24,218 +25,358 @@ body{
   color:var(--text);
 }
 
-/* HEADER */
-.header{
+/* HERO */
+.hero{
   text-align:center;
-  padding:110px 20px 50px;
+  padding:110px 20px 30px;
 }
 
-.header h1{
-  font-size:60px;
-  font-weight:600;
+.hero h1{
+  font-size:58px;
   margin:0;
-  letter-spacing:-1px;
-
-  /* subtle champagne gold */
   color:var(--gold);
+  letter-spacing:-1px;
 }
 
-.header p{
+.hero p{
   margin-top:10px;
-  font-size:15px;
   color:var(--muted);
 }
 
-/* PROFILE */
-.profile{
-  max-width:1000px;
-  margin:0 auto;
-  padding:0 20px 60px;
-  display:grid;
-  grid-template-columns:1fr 1.5fr;
-  gap:40px;
-  align-items:center;
+/* AUTHORITY STATEMENT */
+.trust{
+  max-width:900px;
+  margin:25px auto 0;
+  font-size:13px;
+  line-height:1.6;
+  color:var(--text);
 }
 
-.photo{
-  height:360px;
-  border-radius:12px;
+.trust span{
+  color:var(--gold);
+  font-weight:600;
+}
+
+/* HERO IMAGE */
+.hero-image{
+  max-width:980px;
+  height:420px;
+  margin:50px auto 90px;
+  border-radius:18px;
   overflow:hidden;
-  background:#e5e7eb;
-  border:1px solid var(--border);
+  background:#ddd;
+  opacity:0;
+  transform:translateY(30px);
+  transition:all 1s ease;
 }
 
-.photo img{
+.hero-image.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.hero-image img{
   width:100%;
   height:100%;
   object-fit:cover;
 }
 
-/* QUOTE */
-.quote{
-  font-size:20px;
-  line-height:1.6;
-  padding-left:18px;
-  border-left:3px solid var(--gold);
+/* SECTIONS */
+.section{
+  max-width:1100px;
+  margin:90px auto;
+  padding:0 20px;
 }
 
-/* SECTION TITLE */
-.section-title{
-  max-width:1000px;
-  margin:60px auto 15px;
-  padding:0 20px;
-  font-size:12px;
+.section h2{
+  font-size:11px;
   letter-spacing:2px;
   text-transform:uppercase;
   color:var(--muted);
+  margin-bottom:40px;
+}
+
+/* FEATURED CARD */
+.featured{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  overflow:hidden;
+  margin-bottom:60px;
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.9s ease;
+}
+
+.featured.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.featured img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+
+.featured-content{
+  padding:24px;
+}
+
+.featured-title{
+  font-size:20px;
+  font-weight:600;
+}
+
+.featured-desc{
+  margin-top:10px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.meta{
+  margin-top:12px;
+  font-size:12px;
+  color:var(--gold);
+}
+
+/* AIR FORCE SPECIAL BLOCK */
+.highest-tier{
+  background:#FAFAFB;
+  border-left:4px solid var(--gold);
+  padding:26px;
+  border-radius:14px;
+  margin-bottom:10px;
+}
+
+/* IMPORTANT SPACER AFTER AIR FORCE */
+.divider-space{
+  height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.divider-line{
+  width:160px;
+  height:1px;
+  background:linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity:0.8;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:70px;
 }
 
 /* CARD */
 .card{
-  max-width:1000px;
-  margin:10px auto;
   background:var(--card);
   border:1px solid var(--border);
-  border-radius:10px;
-  padding:16px;
-
-  display:grid;
-  grid-template-columns:140px 1fr 100px;
-  gap:16px;
-  align-items:center;
+  border-radius:14px;
+  padding:26px;
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.9s ease;
 }
 
-/* IMAGE */
-.thumb{
-  height:80px;
-  border-radius:8px;
-  overflow:hidden;
-  background:#f1f5f9;
+.card.visible{
+  opacity:1;
+  transform:translateY(0);
 }
 
-.thumb img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.card:hover{
+  transform:translateY(-6px);
 }
 
-/* TEXT */
-.title{
+.card-title{
   font-weight:600;
-  margin-bottom:4px;
+  margin-bottom:12px;
 }
 
-.desc{
-  font-size:13px;
+.card-desc{
   color:var(--muted);
+  line-height:1.7;
+  margin-bottom:14px;
 }
 
-/* BADGE */
-.badge{
-  font-size:11px;
-  padding:4px 8px;
-  border-radius:999px;
-  border:1px solid var(--border);
-  text-align:center;
-  color:var(--muted);
+.card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:12px;
 }
 
 /* FOOTER */
 footer{
   text-align:center;
-  padding:60px 20px;
-  font-size:12px;
+  padding:80px;
   color:var(--muted);
+  font-size:12px;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px);}
+  to{opacity:1;transform:translateY(0);}
 }
 
 /* MOBILE */
 @media(max-width:800px){
-  .profile,.card{
-    grid-template-columns:1fr;
-  }
-
-  .header h1{
-    font-size:40px;
-  }
+  .hero h1{font-size:38px;}
+  .hero-image{height:260px;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <h1>NAME</h1>
+<!-- HERO -->
+<div class="hero">
+  <h1>Name Last Name</h1>
   <p>Cybersecurity Speaker • Executive Leader • Strategic Advisor</p>
+
+  <div class="trust">
+    Trusted at the <span>military level</span>, across <span>enterprise organizations</span>, and within <span>nonprofit cybersecurity initiatives</span> for executive keynote leadership and strategic advisory.
+  </div>
 </div>
 
-<!-- PROFILE -->
-<div class="profile">
-
-  <div class="photo">
-    <img src="images/profile.jpg" alt="Speaker">
-  </div>
-
-  <div class="quote">
-    “Cybersecurity leadership is the ability to translate risk into strategic decisions that drive resilience, trust, and business value.”
-  </div>
-
+<!-- HERO IMAGE -->
+<div class="hero-image">
+  <img src="images/hero.jpg">
 </div>
 
-<!-- FEATURED -->
-<div class="section-title">Featured Keynote</div>
+<!-- SIGNATURE -->
+<div class="section">
+  <h2>Signature Executive Engagements</h2>
 
-<div class="card">
-  <div class="thumb"><img src="images/featured.jpg"></div>
-  <div>
-    <div class="title">SecureWorld Detroit — Global AI Dilemma</div>
-    <div class="desc">Executive keynote on AI governance and enterprise cyber risk strategy.</div>
+  <!-- AIR FORCE (TOP TIER) -->
+  <div class="highest-tier">
+    <div class="card-title">U.S. Air Force | Invitation-Only Keynote</div>
+    <div class="card-desc">
+      Served as keynote speaker for an invitation-only engagement hosted by a U.S. Air Force Commander. Presentation topic and supporting details are intentionally undisclosed. Confidential executive engagement
+    </div>
+    <div class="meta">April 2025</div>
   </div>
-  <div class="badge">Keynote</div>
+
+  <!-- STRATEGIC SPACER -->
+  <div class="divider-space">
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- NEXT ENGAGEMENT -->
+  <div class="featured">
+    <img src="images/secureworld.jpg">
+    <div class="featured-content">
+      <div class="featured-title">SecureWorld Detroit Conference</div>
+      <div class="featured-desc">
+        Speaker: Global AI Dilemma: How EU and U.S. are balancing innovation with regulation
+      </div>
+      <div class="meta">September 11, 2025</div>
+    </div>
+  </div>
 </div>
 
-<!-- TALKS -->
-<div class="section-title">Selected Engagements</div>
+<!-- EXECUTIVE LEADERSHIP -->
+<div class="section">
+  <h2>Executive Leadership & Advisory</h2>
 
-<div class="card">
-  <div class="thumb"><img src="images/issa.jpg"></div>
-  <div>
-    <div class="title">ISSA Motor City Chapter</div>
-    <div class="desc">From Risk to ROI: The strategic value of Zero Trust.</div>
-  </div>
-  <div class="badge">Talk</div>
-</div>
+  <div class="grid">
 
-<div class="card">
-  <div class="thumb"><img src="images/cyberrisk.jpg"></div>
-  <div>
-    <div class="title">CyberRisk Alliance</div>
-    <div class="desc">CISO fireside chat on leadership and workforce development.</div>
-  </div>
-  <div class="badge">Panel</div>
-</div>
+    <div class="card">
+      <div class="card-title">CyberRisk Collaborative – Detroit | Executive Roundtable Leader</div>
+      <div class="card-desc">
+        Led a private, invitation-only CISO dinner roundtable in Detroit focused on cybersecurity risk and executive strategy in a confidential executive setting. (No photography was taken)
+      </div>
+      <div class="meta">February 6, 2025</div>
+    </div>
 
-<div class="card">
-  <div class="thumb"><img src="images/airforce.jpg"></div>
-  <div>
-    <div class="title">U.S. Air Force (Invitation Only)</div>
-    <div class="desc">Confidential executive cybersecurity briefing.</div>
-  </div>
-  <div class="badge">Briefing</div>
-</div>
+    <div class="card">
+      <img src="images/cyberrisk-alliance.jpg">
+      <div class="card-title">CyberRisk Alliance – Detroit | CISO Gathering</div>
+      <div class="card-desc">
+        Contributed to a fireside chat on the mission of NICE | NIST and volunteer efforts supporting cybersecurity career development as a career ambassador.
+      </div>
+      <div class="meta">April 3, 2025</div>
+    </div>
 
-<div class="card">
-  <div class="thumb"><img src="images/isaca.jpg"></div>
-  <div>
-    <div class="title">ISACA / HTCIA / CXO Xchange</div>
-    <div class="desc">Leadership, AI governance, and cybersecurity transformation.</div>
+    <div class="card">
+      <img src="images/issa.jpg">
+      <div class="card-title">ISSA Motor City Chapter Meeting</div>
+      <div class="card-desc">
+        Co-delivered a keynote session titled “From Risk to ROI: The Strategic Value of Zero Trust,” focused on translating Zero Trust principles into measurable business value.
+      </div>
+      <div class="meta">May 22, 2025</div>
+    </div>
+
+    <div class="card">
+      <img src="images/cxo.jpg">
+      <div class="card-title">CXO Xchange Motor City CyberCon</div>
+      <div class="card-desc">
+        Panel speaker on the topic: Leadership in Security — Empowering Teams and Driving Change
+      </div>
+      <div class="meta">May 6, 2025</div>
+    </div>
+
+    <div class="card">
+      <img src="images/isaca.jpg">
+      <div class="card-title">ISACA Detroit Chapter</div>
+      <div class="card-desc">
+        Keynote topic: From Initiative to Impact: Leading Change as a NICE Cybersecurity Career Ambassador
+      </div>
+      <div class="meta">October 15, 2025</div>
+    </div>
+
+    <div class="card">
+      <img src="images/htcia.jpg">
+      <div class="card-title">Michigan HTCIA Chapter Meeting</div>
+      <div class="card-desc">
+        Keynote topic: The Future of AI From the Point of View of Accountability and Progress
+      </div>
+      <div class="meta">October 16, 2025</div>
+    </div>
+
+    <div class="card">
+      <img src="images/cyberrisk-exchange.jpg">
+      <div class="card-title">CyberRisk Leadership Exchange: Detroit</div>
+      <div class="card-desc">
+        Featured Keynote: Leading Forward: The Future of Cybersecurity Leadership
+      </div>
+      <div class="meta">November 12, 2025</div>
+    </div>
+
+    <div class="card">
+      <img src="images/secureworld-gov.jpg">
+      <div class="card-title">SecureWorld Government & Education Conference</div>
+      <div class="card-desc">
+        Keynote topic: The Global AI Dilemma: How the EU and U.S. Are Balancing Innovation and Regulation
+      </div>
+      <div class="meta">November 13, 2025</div>
+    </div>
+
   </div>
-  <div class="badge">Leadership</div>
 </div>
 
 <footer>
-© Cybersecurity Executive Speaker • Leadership • Strategy • Advisory
+© Executive Cybersecurity Speaker • Leadership • Strategy • Advisory
 </footer>
+
+<script>
+const elements = document.querySelectorAll('.card, .featured, .hero-image');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
