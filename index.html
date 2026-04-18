@@ -25,6 +25,33 @@ body{
   color:var(--text);
 }
 
+/* TOP NAV BUTTONS */
+.top-nav{
+  position:fixed;
+  top:18px;
+  right:20px;
+  display:flex;
+  gap:10px;
+  z-index:999;
+}
+
+.top-nav a{
+  text-decoration:none;
+  font-size:12px;
+  padding:10px 14px;
+  border-radius:8px;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  background:rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  transition:0.3s;
+}
+
+.top-nav a:hover{
+  background:var(--gold);
+  color:#fff;
+}
+
 /* HERO */
 .hero{
   text-align:center;
@@ -202,14 +229,6 @@ body{
   margin-bottom:14px;
 }
 
-.card img{
-  width:100%;
-  height:150px;
-  object-fit:cover;
-  border-radius:10px;
-  margin-bottom:12px;
-}
-
 /* FOOTER */
 footer{
   text-align:center;
@@ -234,6 +253,13 @@ footer{
 
 <body>
 
+<!-- TOP NAV BUTTONS -->
+<div class="top-nav">
+  <a href="#about">About</a>
+  <a href="#ebook">Free Ebook</a>
+  <a href="#contact">Contact</a>
+</div>
+
 <!-- HERO -->
 <div class="hero">
   <h1>Name Last Name</h1>
@@ -253,7 +279,6 @@ footer{
 <div class="section">
   <h2>Signature Executive Engagements</h2>
 
-  <!-- AIR FORCE (TOP TIER) -->
   <div class="highest-tier">
     <div class="card-title">U.S. Air Force | Invitation-Only Keynote</div>
     <div class="card-desc">
@@ -262,12 +287,10 @@ footer{
     <div class="meta">April 2025</div>
   </div>
 
-  <!-- STRATEGIC SPACER -->
   <div class="divider-space">
     <div class="divider-line"></div>
   </div>
 
-  <!-- NEXT ENGAGEMENT -->
   <div class="featured">
     <img src="images/secureworld.jpg">
     <div class="featured-content">
@@ -292,69 +315,6 @@ footer{
         Led a private, invitation-only CISO dinner roundtable in Detroit focused on cybersecurity risk and executive strategy in a confidential executive setting. (No photography was taken)
       </div>
       <div class="meta">February 6, 2025</div>
-    </div>
-
-    <div class="card">
-      <img src="images/cyberrisk-alliance.jpg">
-      <div class="card-title">CyberRisk Alliance – Detroit | CISO Gathering</div>
-      <div class="card-desc">
-        Contributed to a fireside chat on the mission of NICE | NIST and volunteer efforts supporting cybersecurity career development as a career ambassador.
-      </div>
-      <div class="meta">April 3, 2025</div>
-    </div>
-
-    <div class="card">
-      <img src="images/issa.jpg">
-      <div class="card-title">ISSA Motor City Chapter Meeting</div>
-      <div class="card-desc">
-        Co-delivered a keynote session titled “From Risk to ROI: The Strategic Value of Zero Trust,” focused on translating Zero Trust principles into measurable business value.
-      </div>
-      <div class="meta">May 22, 2025</div>
-    </div>
-
-    <div class="card">
-      <img src="images/cxo.jpg">
-      <div class="card-title">CXO Xchange Motor City CyberCon</div>
-      <div class="card-desc">
-        Panel speaker on the topic: Leadership in Security — Empowering Teams and Driving Change
-      </div>
-      <div class="meta">May 6, 2025</div>
-    </div>
-
-    <div class="card">
-      <img src="images/isaca.jpg">
-      <div class="card-title">ISACA Detroit Chapter</div>
-      <div class="card-desc">
-        Keynote topic: From Initiative to Impact: Leading Change as a NICE Cybersecurity Career Ambassador
-      </div>
-      <div class="meta">October 15, 2025</div>
-    </div>
-
-    <div class="card">
-      <img src="images/htcia.jpg">
-      <div class="card-title">Michigan HTCIA Chapter Meeting</div>
-      <div class="card-desc">
-        Keynote topic: The Future of AI From the Point of View of Accountability and Progress
-      </div>
-      <div class="meta">October 16, 2025</div>
-    </div>
-
-    <div class="card">
-      <img src="images/cyberrisk-exchange.jpg">
-      <div class="card-title">CyberRisk Leadership Exchange: Detroit</div>
-      <div class="card-desc">
-        Featured Keynote: Leading Forward: The Future of Cybersecurity Leadership
-      </div>
-      <div class="meta">November 12, 2025</div>
-    </div>
-
-    <div class="card">
-      <img src="images/secureworld-gov.jpg">
-      <div class="card-title">SecureWorld Government & Education Conference</div>
-      <div class="card-desc">
-        Keynote topic: The Global AI Dilemma: How the EU and U.S. Are Balancing Innovation and Regulation
-      </div>
-      <div class="meta">November 13, 2025</div>
     </div>
 
   </div>
