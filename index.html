@@ -92,23 +92,9 @@ body{
   border-radius:18px;
   overflow:hidden;
   background:#ddd;
-  opacity:0;
-  transform:translateY(30px);
-  transition:all 1s ease;
 }
 
-.hero-image.visible{
-  opacity:1;
-  transform:translateY(0);
-}
-
-.hero-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* ABOUT SECTION (UNCHANGED CONTENT STYLE) */
+/* ABOUT */
 #aboutPopup{
   display:none;
   max-width:1100px;
@@ -128,11 +114,7 @@ body{
   line-height:1.7;
 }
 
-#aboutPopup strong{
-  color:#1F2937;
-}
-
-/* SECTIONS */
+/* SECTION */
 .section{
   max-width:1100px;
   margin:90px auto;
@@ -147,34 +129,22 @@ body{
   margin-bottom:40px;
 }
 
-/* FEATURED CARD */
-.featured{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
-  overflow:hidden;
-  margin-bottom:60px;
+/* AIR FORCE BLOCK */
+.highest-tier{
+  background:#FAFAFB;
+  border-left:4px solid var(--gold);
+  padding:26px;
+  border-radius:14px;
 }
 
-.featured img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-}
-
-.featured-content{
-  padding:24px;
-}
-
-.featured-title{
-  font-size:20px;
+.card-title{
   font-weight:600;
+  margin-bottom:12px;
 }
 
-.featured-desc{
-  margin-top:10px;
+.card-desc{
   color:var(--muted);
-  line-height:1.6;
+  line-height:1.7;
 }
 
 .meta{
@@ -183,16 +153,7 @@ body{
   color:var(--gold);
 }
 
-/* AIR FORCE */
-.highest-tier{
-  background:#FAFAFB;
-  border-left:4px solid var(--gold);
-  padding:26px;
-  border-radius:14px;
-  margin-bottom:10px;
-}
-
-/* DIVIDER */
+/* 🔥 GOLD DIVIDER LINE (RESTORED) */
 .divider-space{
   height:90px;
   display:flex;
@@ -206,42 +167,12 @@ body{
   background:linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:70px;
-}
-
-/* CARD */
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:26px;
-}
-
-.card-title{
-  font-weight:600;
-  margin-bottom:12px;
-}
-
-.card-desc{
-  color:var(--muted);
-  line-height:1.7;
-}
-
 /* FOOTER */
 footer{
   text-align:center;
   padding:80px;
   color:var(--muted);
   font-size:12px;
-}
-
-/* HIDE MAIN CONTENT WHEN ABOUT OPEN */
-.hidden{
-  display:none;
 }
 </style>
 </head>
@@ -270,68 +201,25 @@ footer{
   <img src="images/hero.jpg">
 </div>
 
-<!-- PRESENTATIONS (UNCHANGED) -->
-<div id="mainContent3">
-
-<div class="section">
+<!-- AIR FORCE ONLY -->
+<div class="section" id="mainContent3">
   <h2>Signature Executive Engagements</h2>
 
   <div class="highest-tier">
     <div class="card-title">U.S. Air Force | Invitation-Only Keynote</div>
     <div class="card-desc">
-      Served as keynote speaker for an invitation-only engagement.
+      Served as keynote speaker for an invitation-only engagement hosted by a U.S. Air Force Commander. Presentation topic and supporting details are intentionally undisclosed.
     </div>
     <div class="meta">April 2025</div>
   </div>
 
+  <!-- RESTORED GOLD LINE -->
   <div class="divider-space">
     <div class="divider-line"></div>
   </div>
-
-  <div class="featured">
-    <img src="images/secureworld.jpg">
-    <div class="featured-content">
-      <div class="featured-title">SecureWorld Detroit Conference</div>
-      <div class="featured-desc">
-        Global AI Dilemma: EU and U.S. regulation
-      </div>
-      <div class="meta">September 11, 2025</div>
-    </div>
-  </div>
 </div>
 
-<div class="section">
-  <h2>Executive Leadership & Advisory</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <div class="card-title">CyberRisk Collaborative – Detroit</div>
-      <div class="card-desc">Executive Roundtable Leader</div>
-    </div>
-
-    <div class="card">
-      <img src="images/cyberrisk-alliance.jpg">
-      <div class="card-title">CyberRisk Alliance – Detroit</div>
-      <div class="card-desc">CISO Gathering</div>
-    </div>
-
-    <div class="card">
-      <img src="images/issa.jpg">
-      <div class="card-title">ISSA Motor City Chapter</div>
-    </div>
-
-    <div class="card">
-      <img src="images/cxo.jpg">
-      <div class="card-title">CXO Xchange CyberCon</div>
-    </div>
-
-  </div>
-</div>
-
-</div>
-
-<!-- ABOUT ONLY -->
+<!-- ABOUT -->
 <div id="aboutPopup">
   <div class="box">
 
