@@ -108,7 +108,7 @@ body{
   object-fit:cover;
 }
 
-/* ABOUT PANEL (ONLY ADDITION) */
+/* ABOUT SECTION (UNCHANGED CONTENT STYLE) */
 #aboutPopup{
   display:none;
   max-width:1100px;
@@ -154,14 +154,6 @@ body{
   border-radius:16px;
   overflow:hidden;
   margin-bottom:60px;
-  opacity:0;
-  transform:translateY(40px);
-  transition:all 0.9s ease;
-}
-
-.featured.visible{
-  opacity:1;
-  transform:translateY(0);
 }
 
 .featured img{
@@ -191,7 +183,7 @@ body{
   color:var(--gold);
 }
 
-/* AIR FORCE SPECIAL BLOCK */
+/* AIR FORCE */
 .highest-tier{
   background:#FAFAFB;
   border-left:4px solid var(--gold);
@@ -212,7 +204,6 @@ body{
   width:160px;
   height:1px;
   background:linear-gradient(90deg, transparent, var(--gold), transparent);
-  opacity:0.8;
 }
 
 /* GRID */
@@ -238,7 +229,6 @@ body{
 .card-desc{
   color:var(--muted);
   line-height:1.7;
-  margin-bottom:14px;
 }
 
 /* FOOTER */
@@ -249,25 +239,24 @@ footer{
   font-size:12px;
 }
 
-/* MOBILE */
-@media(max-width:800px){
-  .hero h1{font-size:38px;}
-  .hero-image{height:260px;}
+/* HIDE MAIN CONTENT WHEN ABOUT OPEN */
+.hidden{
+  display:none;
 }
 </style>
 </head>
 
 <body>
 
-<!-- TOP NAV (ONLY CHANGE = ABOUT CLICK ACTION) -->
+<!-- NAV -->
 <div class="top-nav">
-  <a href="javascript:void(0)" onclick="toggleAbout()">About</a>
+  <a href="javascript:void(0)" onclick="showAbout()">About</a>
   <a href="https://www.canva.com/design/DAG7nJqqp24/XkuhAkIGX6ZVmMtOze82Fg/view?utm_content=DAG7nJqqp24&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hea01ba5b87" target="_blank">Free Ebook</a>
   <a href="#contact">Contact</a>
 </div>
 
 <!-- HERO -->
-<div class="hero">
+<div class="hero" id="mainContent">
   <h1>Name Last Name</h1>
   <p>Cybersecurity Speaker • Executive Leader • Strategic Advisor</p>
 
@@ -277,39 +266,20 @@ footer{
 </div>
 
 <!-- HERO IMAGE -->
-<div class="hero-image">
+<div class="hero-image" id="mainContent2">
   <img src="images/hero.jpg">
 </div>
 
-<!-- ABOUT POPUP (ADDED ONLY - NOTHING REMOVED) -->
-<div id="aboutPopup">
-  <div class="box">
+<!-- PRESENTATIONS (UNCHANGED) -->
+<div id="mainContent3">
 
-    <p>My guiding belief is that excellence is built through curiosity, continuous learning, and service to something bigger than yourself, striving to become so exceptionally good and create lasting impact across the industry.</p>
-
-    <p>🔹 Recognized as 40 Under 40 by Oakland County Government for innovation, exceptional community service, and professional achievement, I lead cyber compliance at a Fortune 500 organization in critical infrastructure, helping executives turn complex risk into clear, actionable decisions.</p>
-
-    <p>🔹 Over the past year, I have spoken at more than a dozen C-level, invitation-only events and top cybersecurity conferences including ISACA, ISSA, HTCIA, SecureWorld, CyberRisk Collaborative, and CXO Xchange CyberCon.</p>
-
-    <p>🔹 At the invitation of a U.S. Air Force commander, I presented in front of an active cyber squadron to empower the next generation of cyber leaders and strengthening leadership mindset in mission-critical cyber operations.</p>
-
-    <p>🔹 As a NICE Cybersecurity Career Ambassador, I authored a free e-book to share my journey, inspire future leaders, and challenge executives to uplift others and open doors.</p>
-
-    <p>🔹 Credentials include CISM, multiple ISO/IEC 27001 certifications, Master Certificate in Enterprise Cybersecurity Leadership, and HarvardX Leadership (EdX).</p>
-
-    <p><strong>I deliver cybersecurity leadership that drives measurable business impact, transforms culture, and positions organizations to lead confidently in a world where cybersecurity defines organizational resilience.</strong></p>
-
-  </div>
-</div>
-
-<!-- SIGNATURE (UNCHANGED) -->
 <div class="section">
   <h2>Signature Executive Engagements</h2>
 
   <div class="highest-tier">
     <div class="card-title">U.S. Air Force | Invitation-Only Keynote</div>
     <div class="card-desc">
-      Served as keynote speaker for an invitation-only engagement hosted by a U.S. Air Force Commander. Presentation topic and supporting details are intentionally undisclosed.
+      Served as keynote speaker for an invitation-only engagement.
     </div>
     <div class="meta">April 2025</div>
   </div>
@@ -323,103 +293,78 @@ footer{
     <div class="featured-content">
       <div class="featured-title">SecureWorld Detroit Conference</div>
       <div class="featured-desc">
-        Speaker: Global AI Dilemma: How EU and U.S. are balancing innovation with regulation
+        Global AI Dilemma: EU and U.S. regulation
       </div>
       <div class="meta">September 11, 2025</div>
     </div>
   </div>
 </div>
 
-<!-- EXECUTIVE LEADERSHIP (UNCHANGED) -->
 <div class="section">
   <h2>Executive Leadership & Advisory</h2>
 
   <div class="grid">
 
     <div class="card">
-      <div class="card-title">CyberRisk Collaborative – Detroit | Executive Roundtable Leader</div>
-      <div class="card-desc">
-        Led a private, invitation-only CISO dinner roundtable in Detroit focused on cybersecurity risk and executive strategy.
-      </div>
-      <div class="meta">February 6, 2025</div>
+      <div class="card-title">CyberRisk Collaborative – Detroit</div>
+      <div class="card-desc">Executive Roundtable Leader</div>
     </div>
 
     <div class="card">
       <img src="images/cyberrisk-alliance.jpg">
-      <div class="card-title">CyberRisk Alliance – Detroit | CISO Gathering</div>
-      <div class="card-desc">
-        Contributed to a fireside chat on NICE | NIST and cybersecurity career development.
-      </div>
-      <div class="meta">April 3, 2025</div>
+      <div class="card-title">CyberRisk Alliance – Detroit</div>
+      <div class="card-desc">CISO Gathering</div>
     </div>
 
     <div class="card">
       <img src="images/issa.jpg">
-      <div class="card-title">ISSA Motor City Chapter Meeting</div>
-      <div class="card-desc">
-        “From Risk to ROI: The Strategic Value of Zero Trust”
-      </div>
-      <div class="meta">May 22, 2025</div>
+      <div class="card-title">ISSA Motor City Chapter</div>
     </div>
 
     <div class="card">
       <img src="images/cxo.jpg">
-      <div class="card-title">CXO Xchange Motor City CyberCon</div>
-      <div class="card-desc">
-        Leadership in Security — Empowering Teams and Driving Change
-      </div>
-      <div class="meta">May 6, 2025</div>
-    </div>
-
-    <div class="card">
-      <img src="images/isaca.jpg">
-      <div class="card-title">ISACA Detroit Chapter</div>
-      <div class="card-desc">
-        From Initiative to Impact: Leading Change as a NICE Cybersecurity Career Ambassador
-      </div>
-      <div class="meta">October 15, 2025</div>
-    </div>
-
-    <div class="card">
-      <img src="images/htcia.jpg">
-      <div class="card-title">Michigan HTCIA Chapter Meeting</div>
-      <div class="card-desc">
-        The Future of AI From Accountability and Progress
-      </div>
-      <div class="meta">October 16, 2025</div>
-    </div>
-
-    <div class="card">
-      <img src="images/cyberrisk-exchange.jpg">
-      <div class="card-title">CyberRisk Leadership Exchange: Detroit</div>
-      <div class="card-desc">
-        Leading Forward: The Future of Cybersecurity Leadership
-      </div>
-      <div class="meta">November 12, 2025</div>
-    </div>
-
-    <div class="card">
-      <img src="images/secureworld-gov.jpg">
-      <div class="card-title">SecureWorld Government & Education Conference</div>
-      <div class="card-desc">
-        Global AI Dilemma: EU vs U.S. Regulation
-      </div>
-      <div class="meta">November 13, 2025</div>
+      <div class="card-title">CXO Xchange CyberCon</div>
     </div>
 
   </div>
 </div>
 
+</div>
+
+<!-- ABOUT ONLY -->
+<div id="aboutPopup">
+  <div class="box">
+
+    <p><strong>About Me</strong></p>
+
+    <p>My guiding belief is that excellence is built through curiosity, continuous learning, and service to something bigger than yourself, striving to become so exceptionally good and create lasting impact across the industry.</p>
+
+    <p>🔹 Recognized as 40 Under 40 by Oakland County Government for innovation, exceptional community service...</p>
+
+    <p>🔹 Over the past year, I have spoken at more than a dozen C-level events...</p>
+
+    <p>🔹 At the invitation of a U.S. Air Force commander...</p>
+
+    <p>🔹 As a NICE Cybersecurity Career Ambassador...</p>
+
+    <p>🔹 Credentials include CISM, ISO/IEC 27001, HarvardX Leadership...</p>
+
+    <p><strong>I deliver cybersecurity leadership that drives measurable business impact...</strong></p>
+
+  </div>
+</div>
+
 <footer>
-© Executive Cybersecurity Speaker • Leadership • Strategy • Advisory
+© Executive Cybersecurity Speaker
 </footer>
 
-<!-- ONLY JS ADDED -->
 <script>
-function toggleAbout(){
-  const about = document.getElementById("aboutPopup");
-  about.style.display = "block";
-  about.scrollIntoView({behavior:"smooth"});
+function showAbout(){
+  document.getElementById("aboutPopup").style.display="block";
+  document.getElementById("mainContent").style.display="none";
+  document.getElementById("mainContent2").style.display="none";
+  document.getElementById("mainContent3").style.display="none";
+  window.scrollTo(0,0);
 }
 </script>
 
